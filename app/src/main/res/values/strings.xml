@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">L04-Reservation</string>
+    <string name="reservation">Reservation Form</string>
+    <string name="name">Name:</string>
+    <string name="Phone">Phone:</string>
+    <string name="group">Group</string>
+    <string name="entName">Enter Your Name:</string>
+    <string name="entPhone">Enter your phone:</string>
+    <string name="entGroup">Enter your group:</string>
+    <string name="resButton">Reserve</string>
+    <string name="resetButton">Reset</string>
+    <string name="smoking">Smoking</string>
+    <string name="nonSmoking">Non-Smoking</string>
+</resources>
