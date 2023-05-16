@@ -64,25 +64,38 @@ public class MainActivity extends AppCompatActivity {
                }
 
                if (Name.getText().toString().trim().length() == 0 && Phone.getText().toString().trim().length() != 0 && group.getText().toString().trim().length() != 0) {
-                   Toast.makeText(MainActivity.this,"Name is required!",Toast.LENGTH_SHORT).show();
+                   Toast.makeText(MainActivity.this,("Name is required!"),Toast.LENGTH_SHORT).show();
+                   Name.setError("Name is required!");
                }
                else if(Name.getText().toString().trim().length() != 0 && Phone.getText().toString().trim().length() == 0 &&  group.getText().toString().trim().length() != 0){
                    Toast.makeText(MainActivity.this,"Phone number is required!",Toast.LENGTH_SHORT).show();
+                   Phone.setError("Phone Number is Required!");
                }
                else if(Name.getText().toString().trim().length() != 0 && Phone.getText().toString().trim().length() != 0 &&  group.getText().toString().trim().length() == 0){
                    Toast.makeText(MainActivity.this,"Group number is required!",Toast.LENGTH_SHORT).show();
+                   group.setError("Group number is required");
                 }
                 else if(Name.getText().toString().trim().length() == 0 && Phone.getText().toString().trim().length() == 0 &&  group.getText().toString().trim().length() != 0) {
                    Toast.makeText(MainActivity.this, "Name and Phone number is required!", Toast.LENGTH_SHORT).show();
+                   Name.setError("Name is required");
+                   Phone.setError("Phone number is required");
                }
                else if(Name.getText().toString().trim().length() == 0 && Phone.getText().toString().trim().length() != 0 &&  group.getText().toString().trim().length() == 0) {
                    Toast.makeText(MainActivity.this, "Name and Group number is required!", Toast.LENGTH_SHORT).show();
+                   Name.setError("Name is required");
+                   group.setError("Group Number is required");
                }
                else if(Name.getText().toString().trim().length() != 0 && Phone.getText().toString().trim().length() == 0 &&  group.getText().toString().trim().length() == 0) {
                    Toast.makeText(MainActivity.this, "Phone Number and Group number is required!", Toast.LENGTH_SHORT).show();
+                   Phone.setError("Phone number is required");
+                   group.setError("Group Number is required");
+
                }
                else if(Name.getText().toString().trim().length() == 0 && Phone.getText().toString().trim().length() == 0 &&  group.getText().toString().trim().length() == 0) {
                    Toast.makeText(MainActivity.this, "Name, Phone Number and Group number is required!", Toast.LENGTH_SHORT).show();
+                   Phone.setError("Phone number is required");
+                   group.setError("Group Number is required");
+                   Name.setError("Name is required");
                }
                else{
                    Toast.makeText(MainActivity.this,total + "\n"+Date +"\n"+time + "\n Smoking:"+smokeType  ,Toast.LENGTH_SHORT).show();
@@ -138,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                    Toast.makeText(MainActivity.this,"Date has been already past.Select a date that is available",Toast.LENGTH_SHORT);
                }
             }
-        });*/
+        });
         dp.init(dp.getYear(), dp.getMonth(), dp.getDayOfMonth(),
                 new DatePicker.OnDateChangedListener() {
                     @Override
@@ -158,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this,"Date has been already past.Select a date that is available",Toast.LENGTH_SHORT);
                         }
                     }
-                });
+                });*/
 
 
     }
